@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guess the Pi Price Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Guess the Pi Price</h1>
+
+    <!-- Login Screen -->
+    <div id="login-screen" class="screen">
+      <h2>Login with your Pi Username</h2>
+      <input type="text" id="username" placeholder="Enter Pi username" />
+      <button id="login-btn">Login</button>
+      <p class="error" id="login-error"></p>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen hidden">
+      <p>Welcome, <span id="display-username"></span>!</p>
+      <p>Try to guess the current price of Pi coin (between 0.01 and 10 Pi)</p>
+
+      <input
+        type="number"
+        id="guessInput"   <!-- changed from guess-input to guessInput to match script.js -->
+        placeholder="Enter your guess"
+        step="0.01"
+        min="0.01"
+        max="10"
+      />
+      <button id="guessBtn">Guess</button>  <!-- changed from guess-btn to guessBtn -->
+      <p id="result"></p>  <!-- changed from feedback to result -->
+
+      <p>Score: <span id="score">0</span></p> <!-- Added score display to match script.js -->
+
+      <button id="resetBtn" class="hidden">Play Again</button>  <!-- changed from restart-btn to resetBtn --
